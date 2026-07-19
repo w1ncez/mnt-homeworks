@@ -1,38 +1,41 @@
-Role Name
-=========
+# Ansible Role: Vector
 
-A brief description of the role goes here.
+Роль устанавливает и настраивает Vector для сбора и отправки логов.
 
-Requirements
-------------
+---
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## ⚙️ Возможности
 
-Role Variables
---------------
+- Установка Vector
+- Сбор логов (journald, files)
+- Трансформация логов
+- Отправка в ClickHouse
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+---
 
-Dependencies
-------------
+## 📥 Переменные
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+```yaml
+vector_config:
+  sources:
+    syslog:
+      type: journald
 
-Example Playbook
-----------------
+  transforms:
+    remap_logs:
+      type: remap
+      inputs: ["syslog"]
+      source: |
+        .host = get_hostname!()
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+  sinks:
+    clickhouse:
+      type: clickhouse
+      inputs: ["remap_logs"]
+      endpoint: "http://localhost:8123"
+      database: "logs"
+      table: "logs"
+      auth:
+        strategy: basic
+        user: "logs_user"
+        password: "logs_password"
