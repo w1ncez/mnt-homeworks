@@ -8,7 +8,7 @@
 
 ---
 
-## 📦 Используемые роли
+## Используемые роли
 
 ```yaml
 - name: clickhouse 
@@ -22,3 +22,25 @@
 - name: lighthouse
   src: git@github.com:w1ncez/lighthouse-role.git
   version: "1.0.0"
+```
+
+## Установка ролей
+```
+ansible-galaxy install -r requirements.yml -p roles
+```
+## Запуск
+```
+ansible-playbook -i inventory/prod.yml site.yml
+```
+
+## Особенности
+Все сервисы разворачиваются на localhost <br>
+Роли можно разнести по разным хостам <br>
+Vector уже настроен на отправку логов в ClickHouse <br>
+## Лицензия
+
+MIT
+
+## Автор 
+
+Sergey Wince
