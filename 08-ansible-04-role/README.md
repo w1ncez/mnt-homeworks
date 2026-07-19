@@ -1,4 +1,4 @@
-# Домашнее задание к занятию 4 «Работа с roles»
+# Домашнее задание к занятию 4 «Работа с roles» - Винцентини С.Г.
 
 ## Подготовка к выполнению
 
@@ -44,3 +44,11 @@
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
 ---
+
+https://github.com/w1ncez/vector-role
+https://github.com/w1ncez/lighthouse-role
+https://github.com/w1ncez/mnt-homeworks/tree/main/08-ansible-04-role/playbook
+
+
+
+
