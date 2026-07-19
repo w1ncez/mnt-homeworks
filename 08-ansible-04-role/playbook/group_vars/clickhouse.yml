@@ -1,0 +1,25 @@
+---
+clickhouse_users:
+  - name: logs_user
+    password: logs_password
+    networks:
+      - "::/0"
+    profile: default
+    quota: default
+
+clickhouse_databases:
+  - name: logs
+
+clickhouse_tables:
+  - name: logs.logs
+    engine: MergeTree
+    columns:
+      - { name: timestamp, type: DateTime }
+      - { name: message, type: String }
+      - { name: host, type: String }
+      - { name: service, type: String }
+    order_by:
+      - timestamp
+
+clickhouse_listen_host:
+  - "0.0.0.0"
