@@ -45,9 +45,9 @@
 
 ---
 
-https://github.com/w1ncez/vector-role
-https://github.com/w1ncez/lighthouse-role
-https://github.com/w1ncez/mnt-homeworks/tree/main/08-ansible-04-role/playbook
+[vector-role](https://github.com/w1ncez/vector-role) <br>
+[lighthouse-role](https://github.com/w1ncez/lighthouse-role) <br>
+[playbook](https://github.com/w1ncez/mnt-homeworks/tree/main/08-ansible-04-role/playbook)
 
 
 
