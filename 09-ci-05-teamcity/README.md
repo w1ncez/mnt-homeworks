@@ -38,10 +38,14 @@
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
 ---
-Скриншоты к заданию
+
 
 <img width="2636" height="987" alt="image" src="https://github.com/user-attachments/assets/6fb999e7-2cd7-43f0-b217-44b98b02e717" />
 <img width="3419" height="1215" alt="image" src="https://github.com/user-attachments/assets/4b7ff90b-1884-489d-a3da-45558936a4d4" />
 <img width="3415" height="1184" alt="image" src="https://github.com/user-attachments/assets/d366bc09-6603-49b4-bd5a-ee3be3d4fe13" />
+<img width="2289" height="263" alt="image" src="https://github.com/user-attachments/assets/e7750609-38ce-4b11-9f83-0d713083604c" />
+
+
+
 
 
