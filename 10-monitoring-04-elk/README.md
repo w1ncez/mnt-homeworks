@@ -1,25 +1,4 @@
-# Домашнее задание к занятию 15 «Система сбора логов Elastic Stack»
-
-## Дополнительные ссылки
-
-При выполнении задания используйте дополнительные ресурсы:
-
-- [поднимаем elk в docker](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html);
-- [поднимаем elk в docker с filebeat и docker-логами](https://www.sarulabs.com/post/5/2019-08-12/sending-docker-logs-to-elasticsearch-and-kibana-with-filebeat.html);
-- [конфигурируем logstash](https://www.elastic.co/guide/en/logstash/current/configuration.html);
-- [плагины filter для logstash](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html);
-- [конфигурируем filebeat](https://www.elastic.co/guide/en/beats/libbeat/5.3/config-file-format.html);
-- [привязываем индексы из elastic в kibana](https://www.elastic.co/guide/en/kibana/current/index-patterns.html);
-- [как просматривать логи в kibana](https://www.elastic.co/guide/en/kibana/current/discover.html);
-- [решение ошибки increase vm.max_map_count elasticsearch](https://stackoverflow.com/questions/42889241/how-to-increase-vm-max-map-count).
-
-В процессе выполнения в зависимости от системы могут также возникнуть не указанные здесь проблемы.
-
-Используйте output stdout filebeat/kibana и api elasticsearch для изучения корня проблемы и её устранения.
-
-## Задание повышенной сложности
-
-Не используйте директорию [help](./help) при выполнении домашнего задания.
+# Домашнее задание к занятию 15 «Система сбора логов Elastic Stack» - Винцентини С.Г.
 
 ## Задание 1
 
@@ -44,6 +23,12 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+><img width="2129" height="171" alt="image" src="https://github.com/user-attachments/assets/be675f55-ed6c-45f6-b074-0d552dc4defd" />
+><img width="3433" height="1203" alt="image" src="https://github.com/user-attachments/assets/6ddc332f-e15d-4050-97eb-bdf08b7cbf34" />
+
+
+
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
@@ -52,13 +37,12 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
- 
----
 
-### Как оформить решение задания
+><img width="3429" height="1217" alt="image" src="https://github.com/user-attachments/assets/8362352b-e219-4211-9efc-5ccfdf8e310c" />
+><img width="3426" height="1218" alt="image" src="https://github.com/user-attachments/assets/ef287fff-cf50-4699-8e27-9c3398e76136" />
+><img width="3430" height="1209" alt="image" src="https://github.com/user-attachments/assets/602394a3-b2ca-493d-a732-14848f97ebc1" />
+><img width="3410" height="1214" alt="image" src="https://github.com/user-attachments/assets/b6d9ca22-e292-410b-aaf7-912f5841f814" />
 
-Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
----
 
  
